@@ -9,9 +9,9 @@ def parse_args():
     desc = "Tensorflow implementation of BigGAN"
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument('--phase', type=str, default='train', help='train or test ?')
-    parser.add_argument('--dataset', type=str, default='celebA-HQ', help='[mnist / cifar10 / custom_dataset]')
+    parser.add_argument('--dataset', type=str, default='mnist', help='[mnist / cifar10 / custom_dataset]')
 
-    parser.add_argument('--epoch', type=int, default=50, help='The number of epochs to run')
+    parser.add_argument('--epoch', type=int, default=512, help='The number of epochs to run')
     parser.add_argument('--iteration', type=int, default=10000, help='The number of training iterations')
     parser.add_argument('--batch_size', type=int, default=2048, help='The size of batch per gpu')
     parser.add_argument('--ch', type=int, default=96, help='base channel number per layer')
